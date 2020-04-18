@@ -19,14 +19,7 @@ namespace TestMahApp
         private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
             var result = await this.ShowChildWindowAsync<bool>(new MyDialog{ IsModal = true, AllowMove = true }, ChildWindowManager.OverlayFillBehavior.FullWindow);
-            if (result)
-            {
-                await this.ShowMessageAsync("ChildWindow Result", "He, you just clicked the 'Ok' button.");
-            }
-            else
-            {
-                await this.ShowMessageAsync("ChildWindow Result", "The dialog was canceled.");
-            }
+          
         }
     }
 }

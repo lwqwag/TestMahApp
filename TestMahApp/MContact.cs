@@ -5,10 +5,14 @@ namespace TestMahApp
     public class MContact: ValidatorBase
     {
         [Required(ErrorMessage = " Name is required.")]
-        [StringLength(50, ErrorMessage = "No more than 50 characters")]
+        [StringLength(5, ErrorMessage = "No more than 5 characters")]
         [Display(Name = "Name")]
         public string Name { get; set; }
 
+        [Required(ErrorMessage = " Name is required.")]
+        [StringLength(5, ErrorMessage = "No more than 5 characters")]
+        [Display(Name = "Name2")]
+        public string Name2 { get; set; }
 
         [Required(ErrorMessage = "Email is required.")]
         [StringLength(50, ErrorMessage = "No more than 50 characters")]
